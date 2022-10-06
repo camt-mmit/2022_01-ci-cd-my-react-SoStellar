@@ -23,7 +23,7 @@ jobs:
       - run: git init -b gh-pages ./gh-pages
       - run: cd ./gh-pages
       - run: git remote add -t gh-pages origin \
-          https://github.com/camt-mmit/2022_01-ci-cd-my-react-SoStellar
+          https://git:${{ github.token }}@github.com/${{ github.event.repository }}.git
       - run: |
           git pull origin gh-pages
           rm -rf ./*
