@@ -1,9 +1,9 @@
 name: deploy-github-pages
-run-name: ${{ github.actor }} is deploying master
+run-name: ${{ github.actor }} is deploying main
 on:
   push:
     branches:
-      - "main"
+      - main
 jobs:
   deploy-github-pages:
     runs-on: ubuntu-latest
