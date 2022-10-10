@@ -42,7 +42,7 @@ jobs:
           git config --global user.email "${{ github.event.pusher.email }}"
           git config --global user.name "${{ github.actor }}"
       - run: npm install
-      - run: PUBLIC_URL=/2022_01-ci-cd-my-react-SatangBudsai npm run build
+      - run: PUBLIC_URL=/2022_01-ci-cd-my-react-SoStellar npm run build
       - run: |
           mkdir ./gh-pages
           git init -b gh-pages ./gh-pages
