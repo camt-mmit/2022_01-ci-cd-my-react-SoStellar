@@ -18,9 +18,13 @@ jobs:
         run: |
           git config --global user.email "${{ github.event.pusher.email }}"
           git config --global user.name "${{ github.actor }}"
-      - run: npm ci
-      - run: npm run test
-      # - name: Merge to "main"
-      #   run: |
-      #     git fetch --unshallow
-      #     git checkout main
+      - name: Install dependencies
+        run: npm ci
+      - name: Test project
+        run: npm run test
+      - name: Merge to "main"
+        run: |
+          git fetch --unshallow
+          git checkout main
+          git merge feature-01
+          git push
