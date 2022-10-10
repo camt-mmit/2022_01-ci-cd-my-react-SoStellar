@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is integrating feature-01
 on:
   push:
     branches:
-      - "feature-01"
+      - feature-01
 jobs:
   ci-feature-01:
     runs-on: ubuntu-latest
